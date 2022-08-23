@@ -56,9 +56,9 @@ class CardNotification extends StatelessWidget {
                 Text(
                   'Medication and relaxation',
                   style: TextStyle(
-                      color: Color.fromARGB(255, 3, 3, 3),
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
+                    color: Color.fromARGB(255, 3, 3, 3),
+                    fontSize: 18,
+                  ),
                 ),
               ],
             )

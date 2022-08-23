@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/widgets.dart';
 
@@ -18,13 +19,14 @@ class DayScreen extends StatelessWidget {
           Positioned(
             top: size.height * 0.65,
             left: 30,
-            child: const Text(
-              'What do you need today?',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
-            ),
+            child: Text('What do you need today?',
+                style: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
           ),
           ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -33,7 +35,9 @@ class DayScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: const Navigation(),
+      bottomNavigationBar: Navigation(
+        tap: 0,
+      ),
     );
   }
 }
@@ -53,24 +57,24 @@ class _HeadTittle extends StatelessWidget {
         padding: const EdgeInsets.only(left: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              'Welcome user',
-              style: TextStyle(
-                  color: Color.fromARGB(155, 0, 0, 0),
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Text(
-              '20 february, 2020',
-              style: TextStyle(
-                  color: Color.fromARGB(155, 0, 0, 0),
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
-            ),
+          children: [
+            Text('Welcome user',
+                style: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                    color: Colors.black54,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
+            const SizedBox(height: 15),
+            Text('20 february, 2020',
+                style: GoogleFonts.montserrat(
+                  textStyle: const TextStyle(
+                    color: Colors.black38,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
           ],
         ),
       ),
